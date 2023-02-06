@@ -1,0 +1,891 @@
+------------------------------------------------------------------- **FOR CUSTOMER Class FNs** --------------------------------------------------------------------
+
+--------------------------------- TESTS 1 ----------------------------------------------
+*** Insert Customer function::insertCustomerInfo() ****
+--------------------------------------------------------------------------------------
+
+Welcome to the Car Rental Service Software, CRSS:
+
+Are your an Administrator, an existing customer or a new customer?
+Select (A) for Administrator, (E) for an existing customer or (N) for a New customer: a
+
+
+Hello, would you like to Access Customer or Vehicle data (C or V): c
+
+
+You've selected Access to Customer Data:
+For Display Customer Information (select [D])
+For Customer Count (select [C])
+To Insert New Customer Information (select [I])
+To Delete Customer Information (select [B])
+To Make Reservation (select [M])
+To Delete Reservation (select [R])
+To Display Pickup/Dropoff Information (select[P]):: i
+
+
+You've selected to Insert New Customer Information:
+
+Would you like to add a new customer? (Y/N): y
+
+
+
+Connection 9 to the MySQL Database CRSS was Successful.
+
+Enter Driver's License Number: FDNY35Z
+
+ Enter Email Address: bdeblasio@hotmail.com
+
+Please enter your first name: bill
+
+Enter Last Name: de blasio
+
+Enter Birthday: 1961-05-10
+
+Enter City of Residence: New York
+
+Please enter the Apartment Number, however if none exists then add N/A: 45
+
+Enter your Street Address: 4569 Cry Baby Lane
+
+Enter State of Residence: New York
+
+Enter Zip Code: 10314
+
+Please enter your current age: 61
+
+Here is the the result of your insert query.
+
+Connection 6 to the MySQL Database CRSS was Successful.
+
+Drivers License Number: FDB709M Email Address: crykim@gmail.com Customer First Name: kim Customer Last Name:crystal Customer Birthday: 1999-11-05 City Of Residence: Garden Grove Apartment Number: 19 Street Address: 1345 New Land State Of Residence: Nevada Zip Code: 95194 Customer Age: 23
+
+Drivers License Number: FDB716D Email Address: himpson@gmail.com Customer First Name: simpson Customer Last Name:homer Customer Birthday: 1956-05-12 City Of Residence: Springfield Apartment Number: N/A Street Address: 742 Evergreen Terrace State Of Residence: Oregon Zip Code: 97205 Customer Age: 66
+
+Drivers License Number: FDB71lZ Email Address: pgriffin@hotmail.com Customer First Name: griffin Customer Last Name:peter Customer Birthday: 1977-06-12 City Of Residence: Quahog Apartment Number: N/A Street Address: 31 Spooner Street State Of Residence: Rhode Island Zip Code: 00093 Customer Age: 44
+
+Drivers License Number: FDB734Y Email Address: kanwaljeetahluwalia@gmail.com Customer First Name: kanwaljeet Customer Last Name:ahluwalia Customer Birthday: 1986-10-15 City Of Residence: Fullerton Apartment Number: N/A Street Address: 45783 Chuck Norris Cir. State Of Residence: California Zip Code: 92835 Customer Age: 36
+
+Drivers License Number: FDB7Y59 Email Address: alitahami@gmail.com Customer First Name: ali Customer Last Name:tahami Customer Birthday: 1998-01-25 City Of Residence: Irvine Apartment Number: 15 Street Address: 1234 Where In The World AVE State Of Residence: California Zip Code: 92604 Customer Age: 24
+
+Drivers License Number: FDNY35Z Email Address: bdeblasio@hotmail.com Customer First Name: bill Customer Last Name:de blasio Customer Birthday: 1961-05-10 City Of Residence: New York Apartment Number: 45 Street Address: 4569 Cry Baby Lane State Of Residence: New York Zip Code: 10314 Customer Age: 61
+
+
+
+Would you like to continue addding new customers? (Y/N):
+// ------------------------------------------ FROM MySQL -------------------------
+mysql> select * from customers;
++----------------------+-------------------------------+---------------+---------------+------------------+-----------------+-----------------+-----------------------------+------------------+---------+-------------+
+| driversLicenseNumber | emailAddress                  | customerFName | customerLName | customerBirthday | cityOfResidence | apartmentNumber | streetAddress               | stateOfResidence | zipCode | customerAge |
++----------------------+-------------------------------+---------------+---------------+------------------+-----------------+-----------------+-----------------------------+------------------+---------+-------------+
+| FDB709M              | crykim@gmail.com              | kim           | crystal       | 1999-11-05       | Garden Grove    | 19              | 1345 New Land               | Nevada           | 95194   |          23 |
+| FDB716D              | himpson@gmail.com             | simpson       | homer         | 1956-05-12       | Springfield     | N/A             | 742 Evergreen Terrace       | Oregon           | 97205   |          66 |
+| FDB71lZ              | pgriffin@hotmail.com          | griffin       | peter         | 1977-06-12       | Quahog          | N/A             | 31 Spooner Street           | Rhode Island     | 00093   |          44 |
+| FDB734Y              | kanwaljeetahluwalia@gmail.com | kanwaljeet    | ahluwalia     | 1986-10-15       | Fullerton       | N/A             | 45783 Chuck Norris Cir.     | California       | 92835   |          36 |
+| FDB7Y59              | alitahami@gmail.com           | ali           | tahami        | 1998-01-25       | Irvine          | 15              | 1234 Where In The World AVE | California       | 92604   |          24 |
+| FDNY35Z              | bdeblasio@hotmail.com         | bill          | de blasio     | 1961-05-10       | New York        | 45              | 4569 Cry Baby Lane          | New York         | 10314   |          61 |
++----------------------+-------------------------------+---------------+---------------+------------------+-----------------+-----------------+-----------------------------+------------------+---------+-------------+
+6 rows in set (0.00 sec)
+
+--------------------------------- TESTS 2 ----------------------------------------------
+*** Delete Customer function::deleteCustomerInfo() ****
+----------------------------------------------------------------------------------------
+
+For Display Customer Information (select [D])
+For Customer Count (select [C])
+To Insert New Customer Information (select [I])
+To Delete Customer Information (select [B])
+To Make Reservation (select [M])
+To Delete Reservation (select [R])
+To Display Pickup/Dropoff Information (select[P]):: b
+
+
+You've selected to Delete Customer Information:
+
+Would you like to delete a customer? (Y/N): y
+
+
+
+Connection 9 to the MySQL Database CRSS was Successful.
+
+Enter Driver's License Number: FDNY35Z
+
+
+Here is the the result of your delete query.
+
+Connection 6 to the MySQL Database CRSS was Successful.
+
+Drivers License Number: FDB709M Email Address: crykim@gmail.com Customer First Name: kim Customer Last Name:crystal Customer Birthday: 1999-11-05 City Of Residence: Garden Grove Apartment Number: 19 Street Address: 1345 New Land State Of Residence: Nevada Zip Code: 95194 Customer Age: 23
+
+Drivers License Number: FDB716D Email Address: himpson@gmail.com Customer First Name: simpson Customer Last Name:homer Customer Birthday: 1956-05-12 City Of Residence: Springfield Apartment Number: N/A Street Address: 742 Evergreen Terrace State Of Residence: Oregon Zip Code: 97205 Customer Age: 66
+
+Drivers License Number: FDB71lZ Email Address: pgriffin@hotmail.com Customer First Name: griffin Customer Last Name:peter Customer Birthday: 1977-06-12 City Of Residence: Quahog Apartment Number: N/A Street Address: 31 Spooner Street State Of Residence: Rhode Island Zip Code: 00093 Customer Age: 44
+
+Drivers License Number: FDB734Y Email Address: kanwaljeetahluwalia@gmail.com Customer First Name: kanwaljeet Customer Last Name:ahluwalia Customer Birthday: 1986-10-15 City Of Residence: Fullerton Apartment Number: N/A Street Address: 45783 Chuck Norris Cir. State Of Residence: California Zip Code: 92835 Customer Age: 36
+
+Drivers License Number: FDB7Y59 Email Address: alitahami@gmail.com Customer First Name: ali Customer Last Name:tahami Customer Birthday: 1998-01-25 City Of Residence: Irvine Apartment Number: 15 Street Address: 1234 Where In The World AVE State Of Residence: California Zip Code: 92604 Customer Age: 24
+
+
+
+Would you like to continue deleting customers? (Y/N): n
+----------------------------------- from MySQL -------------------------------------------
+
+mysql> select * from customers;
++----------------------+-------------------------------+---------------+---------------+------------------+-----------------+-----------------+-----------------------------+------------------+---------+-------------+
+| driversLicenseNumber | emailAddress                  | customerFName | customerLName | customerBirthday | cityOfResidence | apartmentNumber | streetAddress               | stateOfResidence | zipCode | customerAge |
++----------------------+-------------------------------+---------------+---------------+------------------+-----------------+-----------------+-----------------------------+------------------+---------+-------------+
+| FDB709M              | crykim@gmail.com              | kim           | crystal       | 1999-11-05       | Garden Grove    | 19              | 1345 New Land               | Nevada           | 95194   |          23 |
+| FDB716D              | himpson@gmail.com             | simpson       | homer         | 1956-05-12       | Springfield     | N/A             | 742 Evergreen Terrace       | Oregon           | 97205   |          66 |
+| FDB71lZ              | pgriffin@hotmail.com          | griffin       | peter         | 1977-06-12       | Quahog          | N/A             | 31 Spooner Street           | Rhode Island     | 00093   |          44 |
+| FDB734Y              | kanwaljeetahluwalia@gmail.com | kanwaljeet    | ahluwalia     | 1986-10-15       | Fullerton       | N/A             | 45783 Chuck Norris Cir.     | California       | 92835   |          36 |
+| FDB7Y59              | alitahami@gmail.com           | ali           | tahami        | 1998-01-25       | Irvine          | 15              | 1234 Where In The World AVE | California       | 92604   |          24 |
++----------------------+-------------------------------+---------------+---------------+------------------+-----------------+-----------------+-----------------------------+------------------+---------+-------------+
+5 rows in set (0.00 sec)
+
+--------------------------------- TESTS 3 ----------------------------------------------
+*** make Reservation function::makeReservation() ****
+----------------------------------------------------------------------------------------
+Welcome to the Car Rental Service Software, CRSS:
+
+Are your an Administrator, an existing customer or a new customer?
+Select (A) for Administrator, (E) for an existing customer or (N) for a New customer: a
+
+
+Let's check your credentials, and remember that everything is case sensitive.
+Please enter your username: KAhluwalia2
+
+Thank you, now please enter your password: #CRSSadmin2&
+
+Welcome Administrator 2, Kanwaljeet.
+
+Hello, would you like to Access Customer or Vehicle data (C or V): c
+
+
+You've selected Access to Customer Data:
+For Display Customer Information (select [D])
+For Customer Count (select [C])
+To Insert New Customer Information (select [I])
+To Delete Customer Information (select [B])
+To Make Reservation (select [M])
+To Delete Reservation (select [R])
+To Display Pickup/Dropoff Information (select[P]):: m
+
+
+You've selected to Make a Reservation:
+
+Let's make a reservation!
+
+Connection 10 to the MySQL Database CRSS was Successful.
+
+What date would you like to being your reservation on?
+Please enter year: 2023
+Enter month: 1
+Enter the day: 10
+
+2023-1-10
+Enter reservation dropoff date?
+Please enter year: 2023
+Enter month: 1
+Enter the day: 20
+
+2023-1-20
+What time will you be picking up the vehicle?
+Default date format is (HH:MM): 1:00
+
+What time will you be dropping off the vehicle?
+Default date format is (HH:MM): 9:00
+
+ plateNumber: SWS5840 vType: coupe vSize: small vMake: chevrolet vModel: camaro color: black vMPG: 17 vNav: yes seatingCapacity: 4 engineCylinders: 8 transmissionType: manual
+
+
+ plateNumber: LPSPLP1 vType: sedan vSize: small vMake: kia vModel: rio color: pink vMPG: 29 vNav: yes seatingCapacity: 4 engineCylinders: 4 transmissionType: automatic
+
+
+ plateNumber: HWS584I vType: suv vSize: medium vMake: honda vModel: crv color: blue vMPG: 33 vNav: no seatingCapacity: 5 engineCylinders: 4 transmissionType: automatic
+
+
+ plateNumber: HWS579T vType: sedan vSize: large vMake: mercedes vModel: e550 color: black vMPG: 30 vNav: yes seatingCapacity: 6 engineCylinders: 8 transmissionType: automatic
+
+
+ plateNumber: HWS794I vType: suv vSize: medium vMake: toyota vModel: highlander color: white vMPG: 24 vNav: yes seatingCapacity: 5 engineCylinders: 6 transmissionType: automatic
+
+
+ plateNumber: NPSMAZS vType: minivan vSize: large vMake: chrysler vModel: pacifica color: blue vMPG: 30 vNav: yes seatingCapacity: 8 engineCylinders: 6 transmissionType: automatic
+
+
+ plateNumber: OGS584P vType: coupe vSize: small vMake: nissan vModel: 370z color: white vMPG: 19 vNav: no seatingCapacity: 2 engineCylinders: 6 transmissionType: manual
+
+
+ plateNumber: OGSYT5P vType: coupe vSize: small vMake: ford vModel: mustang color: red vMPG: 16 vNav: yes seatingCapacity: 4 engineCylinders: 8 transmissionType: manual
+
+
+ plateNumber: LP245P1 vType: minivan vSize: large vMake: honda vModel: odessey color: black vMPG: 30 vNav: yes seatingCapacity: 8 engineCylinders: 6 transmissionType: automatic
+
+
+ plateNumber: ZGSPS20 vType: suv vSize: medium vMake: toyota vModel: rav4 color: white vMPG: 28 vNav: yes seatingCapacity: 7 engineCylinders: 6 transmissionType: Automatic
+
+Please enter the vehicle make you would like to rent? toyota
+
+Please enter the vehicle model you would like to rent? rav4
+
+
+
+To keep the vehicle reservation please complete your transaction.
+Would you like to complete your transaction or select another vehicle?
+ Input the letter C to complete your transaction: c
+
+
+You've selected to complete transaction:
+Connection 11 to the MySQL Database CRSS was Successful.
+
+
+Please enter your user information for validation.
+Case matters, so don't add any unnecessary capital letters.
+Now enter your Email Address: kanwaljeetahluwalia@gmail.com
+
+Now enter your Driver's Lisence Number: FDB734Y
+
+
+Email Address: kanwaljeetahluwalia@gmail.com
+
+
+ DLN: FDB734Y
+
+Validated.
+
+Would you like to complete your transaction? (Y or N) y
+
+How many days is the reservation? 10
+
+ plate Num: ZGSPS20
+VIN: LYG739IK131528KP2
+The total is: $324 2023-1-10
+ 2023-1-20
+ 1:00
+ 9:00
+ ZGSPS20
+ FDB734Y
+ kanwaljeetahluwalia@gmail.com
+
+
+
+Congratulations, your reservation is set and transaction processed!
+Here are your reservation details:
+
+Reservation ID:8
+ Driver's Lisence Number: FDB734Y
+ Email Address:kanwaljeetahluwalia@gmail.com
+ Pickup Date: 2023-01-10
+ Dropoff Date: 2023-01-20
+ Pick-up Time: 01:00:00
+ Dropoff Time: 09:00:00
+
+
+Would you like to return to the Customer Data menu? ( Y or N ) n
+----------------------------------- from MySQL -------------------------------------------
+mysql> select * from vReservation;
++---------------+-----------------------+------------------------+-----------------------+------------------------+
+| reservationID | reservationPickupDate | reservationDropOffDate | reservationPickupTime | reservationDropoffTime |
++---------------+-----------------------+------------------------+-----------------------+------------------------+
+|             1 | 2023-01-10            | 2023-01-25             | 06:30:15              | 02:15:45               |
+|             2 | 2022-01-15            | 2022-01-28             | 06:40:15              | 04:15:45               |
+|             3 | 2023-02-05            | 2023-02-15             | 02:30:15              | 08:15:45               |
+|             4 | 2023-02-08            | 2023-02-27             | 01:30:15              | 09:15:45               |
+|             8 | 2023-01-10            | 2023-01-20             | 01:00:00              | 09:00:00               |
++---------------+-----------------------+------------------------+-----------------------+------------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from madefor;
++-----------+-------+-------------+--------------+------------+-------------+------------+-------------+
+| plateNumm | resID | vehicleMake | vehicleModel | resPickupD | resDropoffD | resPickupT | resDropoffT |
++-----------+-------+-------------+--------------+------------+-------------+------------+-------------+
+| HWS579T   |     1 | mercedes    | e550         | 2023-01-10 | 2023-01-25  | 06:30:15   | 02:15:45    |
+| HWS584I   |     2 | honda       | crv          | 2022-01-15 | 2022-01-28  | 06:40:15   | 04:15:45    |
+| SWS5840   |     3 | chevrolet   | camaro       | 2023-02-05 | 2023-02-15  | 02:30:15   | 08:15:45    |
+| OGS584P   |     4 | nissan      | 370z         | 2023-02-08 | 2023-02-27  | 01:30:15   | 09:15:45    |
+| ZGSPS20   |     8 | toyota      | rav4         | 2023-01-10 | 2023-01-20  | 01:00:00   | 09:00:00    |
++-----------+-------+-------------+--------------+------------+-------------+------------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from isMakingTransaction;
++---------+-----+-------------------------------+
+| DLNumT  | tID | eMailAdd                      |
++---------+-----+-------------------------------+
+| FDB709M |   4 | crykim@gmail.com              |
+| FDB71lZ |   3 | pgriffin@hotmail.com          |
+| FDB734Y |   2 | kanwaljeetahluwalia@gmail.com |
+| FDB734Y |   5 | kanwaljeetahluwalia@gmail.com |
+| FDB7Y59 |   1 | alitahami@gmail.com           |
++---------+-----+-------------------------------+
+5 rows in set (0.00 sec)
+
+
+mysql> select * from wantToMake;
++-----+-------------------+-------------------------------+-------------+--------------+-------------+--------------+
+| rID | driversLicenseNum | EMAdd                         | resPickupDT | resDropoffDT | resPickupTI | resDropoffTI |
++-----+-------------------+-------------------------------+-------------+--------------+-------------+--------------+
+|   1 | FDB7Y59           | alitahami@gmail.com           | 2023-01-10  | 2023-01-25   | 06:30:15    | 02:15:45     |
+|   2 | FDB734Y           | kanwaljeetahluwalia@gmail.com | 2022-01-15  | 2022-01-28   | 06:40:15    | 04:15:45     |
+|   3 | FDB71lZ           | pgriffin@hotmail.com          | 2023-02-05  | 2023-02-15   | 02:30:15    | 08:15:45     |
+|   4 | FDB709M           | crykim@gmail.com              | 2023-02-08  | 2023-02-27   | 01:30:15    | 09:15:45     |
+|   8 | FDB734Y           | kanwaljeetahluwalia@gmail.com | 2023-01-10  | 2023-01-20   | 01:00:00    | 09:00:00     |
++-----+-------------------+-------------------------------+-------------+--------------+-------------+--------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from beingRented;
++---------+-----------+-------------------+------------+
+| transID | plateNumb | vVIN              | vRentCount |
++---------+-----------+-------------------+------------+
+|       1 | HWS579T   | CYG739IKAH1528F09 |          1 |
+|       2 | HWS584I   | CYG739IKAH1528B32 |          1 |
+|       3 | SWS5840   | AYG739IKAH1528Z91 |          1 |
+|       4 | OGS584P   | KYG739IKAH1528K01 |          1 |
+|       5 | ZGSPS20   | LYG739IK131528KP2 |          1 |
++---------+-----------+-------------------+------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from transactions;
++---------------+----------------------+
+| transactionID | transactionTimeStamp |
++---------------+----------------------+
+|             1 | 2022-12-08 12:03:36  |
+|             2 | 2022-12-08 12:03:36  |
+|             3 | 2022-12-08 12:03:36  |
+|             4 | 2022-12-08 12:03:37  |
+|             5 | 2022-12-08 12:08:03  |
++---------------+----------------------+
+5 rows in set (0.00 sec)
+
+--------------------------------- TESTS 4 ----------------------------------------------
+*** Delete Reservation function::deleteReservation() ****
+----------------------------------------------------------------------------------------
+
+For Display Customer Information (select [D])
+For Customer Count (select [C])
+To Insert New Customer Information (select [I])
+To Delete Customer Information (select [B])
+To Make Reservation (select [M])
+To Delete Reservation (select [R])
+To Display Pickup/Dropoff Information (select[P]):: r
+
+
+You've selected to Cancel Reservation:
+To cancel a reservation we'll need your Reservation ID and Email Address.
+Please enter your Reservation ID: 7
+
+Please enter your Email Address: alitahami@gmail.com
+Connection 13 to the MySQL Database CRSS was Successful.
+
+
+Reservation ID: 7
+ Driver's Lisence Number: FDB7Y59
+ Email Address: alitahami@gmail.com
+ Pickup Date: 2023-04-10
+ Dropoff Date: 2023-04-25
+ Pick-up Time: 01:00:00
+ Dropoff Time: 09:00:00
+
+Would you like to cancel your reservation? (Y or N): y
+
+
+7
+Reservation ID: 1
+ Driver's Lisence Number: FDB7Y59
+ Email Address: alitahami@gmail.com
+ Pickup Date: 2023-01-10
+ Dropoff Date: 2023-01-25
+ Pick-up Time: 06:30:15
+ Dropoff Time: 02:15:45
+
+
+Reservation ID: 2
+ Driver's Lisence Number: FDB734Y
+ Email Address: kanwaljeetahluwalia@gmail.com
+ Pickup Date: 2022-01-15
+ Dropoff Date: 2022-01-28
+ Pick-up Time: 06:40:15
+ Dropoff Time: 04:15:45
+
+
+Reservation ID: 3
+ Driver's Lisence Number: FDB71lZ
+ Email Address: pgriffin@hotmail.com
+ Pickup Date: 2023-02-05
+ Dropoff Date: 2023-02-15
+ Pick-up Time: 02:30:15
+ Dropoff Time: 08:15:45
+
+
+Reservation ID: 4
+ Driver's Lisence Number: FDB709M
+ Email Address: crykim@gmail.com
+ Pickup Date: 2023-02-08
+ Dropoff Date: 2023-02-27
+ Pick-up Time: 01:30:15
+ Dropoff Time: 09:15:45
+
+
+Your reservation has been canceled.
+
+Would you like to return to the Customer Data menu? ( Y or N ) y
+----------------------------------- from MySQL -------------------------------------------
+mysql> select * from vreservation;
++---------------+-----------------------+------------------------+-----------------------+------------------------+
+| reservationID | reservationPickupDate | reservationDropOffDate | reservationPickupTime | reservationDropoffTime |
++---------------+-----------------------+------------------------+-----------------------+------------------------+
+|             1 | 2023-01-10            | 2023-01-25             | 06:30:15              | 02:15:45               |
+|             2 | 2022-01-15            | 2022-01-28             | 06:40:15              | 04:15:45               |
+|             3 | 2023-02-05            | 2023-02-15             | 02:30:15              | 08:15:45               |
+|             4 | 2023-02-08            | 2023-02-27             | 01:30:15              | 09:15:45               |
++---------------+-----------------------+------------------------+-----------------------+------------------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from madefor;
++-----------+-------+-------------+--------------+------------+-------------+------------+-------------+
+| plateNumm | resID | vehicleMake | vehicleModel | resPickupD | resDropoffD | resPickupT | resDropoffT |
++-----------+-------+-------------+--------------+------------+-------------+------------+-------------+
+| HWS579T   |     1 | mercedes    | e550         | 2023-01-10 | 2023-01-25  | 06:30:15   | 02:15:45    |
+| HWS584I   |     2 | honda       | crv          | 2022-01-15 | 2022-01-28  | 06:40:15   | 04:15:45    |
+| SWS5840   |     3 | chevrolet   | camaro       | 2023-02-05 | 2023-02-15  | 02:30:15   | 08:15:45    |
+| OGS584P   |     4 | nissan      | 370z         | 2023-02-08 | 2023-02-27  | 01:30:15   | 09:15:45    |
++-----------+-------+-------------+--------------+------------+-------------+------------+-------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from wanttomake;
++-----+-------------------+-------------------------------+-------------+--------------+-------------+--------------+
+| rID | driversLicenseNum | EMAdd                         | resPickupDT | resDropoffDT | resPickupTI | resDropoffTI |
++-----+-------------------+-------------------------------+-------------+--------------+-------------+--------------+
+|   1 | FDB7Y59           | alitahami@gmail.com           | 2023-01-10  | 2023-01-25   | 06:30:15    | 02:15:45     |
+|   2 | FDB734Y           | kanwaljeetahluwalia@gmail.com | 2022-01-15  | 2022-01-28   | 06:40:15    | 04:15:45     |
+|   3 | FDB71lZ           | pgriffin@hotmail.com          | 2023-02-05  | 2023-02-15   | 02:30:15    | 08:15:45     |
+|   4 | FDB709M           | crykim@gmail.com              | 2023-02-08  | 2023-02-27   | 01:30:15    | 09:15:45     |
++-----+-------------------+-------------------------------+-------------+--------------+-------------+--------------+
+4 rows in set (0.00 sec)
+
+--------------------------------- TESTS 5 ----------------------------------------------
+*** Display Pickup/dropoff Info function::displayPickupDropoffInfo() ****
+----------------------------------------------------------------------------------------
+
+For Display Customer Information (select [D])
+For Customer Count (select [C])
+To Insert New Customer Information (select [I])
+To Delete Customer Information (select [B])
+To Make Reservation (select [M])
+To Delete Reservation (select [R])
+To Display Pickup/Dropoff Information (select[P]):: p
+
+
+You've selected to Display Pickup/Dropoff Information:
+
+Please enter your reservation ID number: 4
+
+Please enter your email address : crykim@gmail.com
+
+
+
+Connection 12 to the MySQL Database CRSS was Successful.
+
+
+Reservation ID: 4
+ Driver's Lisence Number: FDB709M
+ Email Address: crykim@gmail.com
+ Pickup Date: 2023-02-08
+ Dropoff Date: 2023-02-27
+ Pick-up Time: 01:30:15
+ Dropoff Time: 09:15:45
+
+
+Would you like to return to the Customer Data menu? ( Y or N ) n
+----------------------------------- from MySQL -------------------------------------------
+mysql> select * from madefor;
++-----------+-------+-------------+--------------+------------+-------------+------------+-------------+
+| plateNumm | resID | vehicleMake | vehicleModel | resPickupD | resDropoffD | resPickupT | resDropoffT |
++-----------+-------+-------------+--------------+------------+-------------+------------+-------------+
+| HWS579T   |     1 | mercedes    | e550         | 2023-01-10 | 2023-01-25  | 06:30:15   | 02:15:45    |
+| HWS584I   |     2 | honda       | crv          | 2022-01-15 | 2022-01-28  | 06:40:15   | 04:15:45    |
+| SWS5840   |     3 | chevrolet   | camaro       | 2023-02-05 | 2023-02-15  | 02:30:15   | 08:15:45    |
+| OGS584P   |     4 | nissan      | 370z         | 2023-02-08 | 2023-02-27  | 01:30:15   | 09:15:45    |
++-----------+-------+-------------+--------------+------------+-------------+------------+-------------+
+4 rows in set (0.00 sec)
+
+
+
+
+------------------------------------------------------------------- **FOR Vehicle Class FNs** --------------------------------------------------------------------
+--------------------------------- TESTS 1 ----------------------------------------------
+*** Display vehicle and count functions::displayVehicle() && vCount()**** 
+----------------------------------------------------------------------------------------
+Welcome to the Car Rental Service Software, CRSS:
+
+Are your an Administrator, an existing customer or a new customer?
+Select (A) for Administrator, (E) for an existing customer or (N) for a New customer: a
+
+
+Hello, would you like to Access Customer or Vehicle data (C or V): v
+
+
+You've selected Access to Vehicle Data:
+For Display Vehicle Information (select [D])
+For Vehicle Count (select [C])
+To Insert New Vehicle Inventory (select [N])
+To Delete Vehicle from Inventory (select [B]):: d
+
+
+You've selected to Display Vehicle Information:
+Connection 2 to the MySQL Database CRSS was Successful.
+
+These are all the vehicles in the Database:
+
+ vVin: AYG739IKAH1528Z91 plateNumber: SWS5840 vType: coupe vSize: small vMake: chevrolet vModel: camaro color: black vMPG: 17 vNav: yes seatingCapacity: 4 engineCylinders: 8 transmissionType: manual
+
+ vVin: B1L239IK13101MSI1 plateNumber: LPSPLP1 vType: sedan vSize: small vMake: kia vModel: rio color: pink vMPG: 29 vNav: yes seatingCapacity: 4 engineCylinders: 4 transmissionType: automatic
+
+ vVin: CYG739IKAH1528B32 plateNumber: HWS584I vType: suv vSize: medium vMake: honda vModel: crv color: blue vMPG: 33 vNav: no seatingCapacity: 5 engineCylinders: 4 transmissionType: automatic
+
+ vVin: CYG739IKAH1528F09 plateNumber: HWS579T vType: sedan vSize: large vMake: mercedes vModel: e550 color: black vMPG: 30 vNav: yes seatingCapacity: 6 engineCylinders: 8 transmissionType: automatic
+
+ vVin: CYG739IZYT1528B32 plateNumber: HWS794I vType: suv vSize: medium vMake: toyota vModel: highlander color: white vMPG: 24 vNav: yes seatingCapacity: 5 engineCylinders: 6 transmissionType: automatic
+
+ vVin: GFN23LPQQ31MLAQLL plateNumber: NPSMAZS vType: minivan vSize: large vMake: chrysler vModel: pacifica color: blue vMPG: 30 vNav: yes seatingCapacity: 8 engineCylinders: 6 transmissionType: automatic
+
+ vVin: KYG739IKAH1528K01 plateNumber: OGS584P vType: coupe vSize: small vMake: nissan vModel: 370z color: white vMPG: 19 vNav: no seatingCapacity: 2 engineCylinders: 6 transmissionType: manual
+
+ vVin: KYG739IKAH1528K02 plateNumber: OGSYT5P vType: coupe vSize: small vMake: ford vModel: mustang color: red vMPG: 16 vNav: yes seatingCapacity: 4 engineCylinders: 8 transmissionType: manual
+
+ vVin: L0G239IK131MLAQP9 plateNumber: LP245P1 vType: minivan vSize: large vMake: honda vModel: odessey color: black vMPG: 30 vNav: yes seatingCapacity: 8 engineCylinders: 6 transmissionType: automatic
+
+ vVin: LYG739IK131528KP2 plateNumber: ZGSPS20 vType: suv vSize: medium vMake: toyota vModel: rav4 color: white vMPG: 28 vNav: yes seatingCapacity: 7 engineCylinders: 6 transmissionType: Automatic
+
+
+Would you like to return to the Vehicle Data menu? ( Y or N ) y
+
+Welcome to the Car Rental Service Software, CRSS:
+
+Are your an Administrator, an existing customer or a new customer?
+Select (A) for Administrator, (E) for an existing customer or (N) for a New customer: a
+
+
+Hello, would you like to Access Customer or Vehicle data (C or V): v
+
+
+You've selected Access to Vehicle Data:
+For Display Vehicle Information (select [D])
+For Vehicle Count (select [C])
+To Insert New Vehicle Inventory (select [N])
+To Delete Vehicle from Inventory (select [B]):: c
+
+
+You've selected to Display Vehicle Count: Connection to the MySQL Database CRSS was Successful.
+
+This is the number of Customers in the CRSS database: 10
+
+Would you like to return to the Vehicle Data menu? ( Y or N ) y
+------------------------------------------------------------------------- FROM MySQL --------------------------------------------------------------------------------------------
+mysql> select * from vehicles;
++-------------------+-------------+---------+--------+-----------+------------+-------+------+------+-----------------+-----------------+------------------+
+| vVin              | plateNumber | vType   | vSize  | vMake     | vModel     | color | vMPG | vNav | seatingCapacity | engineCylinders | transmissionType |
++-------------------+-------------+---------+--------+-----------+------------+-------+------+------+-----------------+-----------------+------------------+
+| AYG739IKAH1528Z91 | SWS5840     | coupe   | small  | chevrolet | camaro     | black |   17 | yes  |               4 |               8 | manual           |
+| B1L239IK13101MSI1 | LPSPLP1     | sedan   | small  | kia       | rio        | pink  |   29 | yes  |               4 |               4 | automatic        |
+| CYG739IKAH1528B32 | HWS584I     | suv     | medium | honda     | crv        | blue  |   33 | no   |               5 |               4 | automatic        |
+| CYG739IKAH1528F09 | HWS579T     | sedan   | large  | mercedes  | e550       | black |   30 | yes  |               6 |               8 | automatic        |
+| CYG739IZYT1528B32 | HWS794I     | suv     | medium | toyota    | highlander | white |   24 | yes  |               5 |               6 | automatic        |
+| GFN23LPQQ31MLAQLL | NPSMAZS     | minivan | large  | chrysler  | pacifica   | blue  |   30 | yes  |               8 |               6 | automatic        |
+| KYG739IKAH1528K01 | OGS584P     | coupe   | small  | nissan    | 370z       | white |   19 | no   |               2 |               6 | manual           |
+| KYG739IKAH1528K02 | OGSYT5P     | coupe   | small  | ford      | mustang    | red   |   16 | yes  |               4 |               8 | manual           |
+| L0G239IK131MLAQP9 | LP245P1     | minivan | large  | honda     | odessey    | black |   30 | yes  |               8 |               6 | automatic        |
+| LYG739IK131528KP2 | ZGSPS20     | suv     | medium | toyota    | rav4       | white |   28 | yes  |               7 |               6 | Automatic        |
++-------------------+-------------+---------+--------+-----------+------------+-------+------+------+-----------------+-----------------+------------------+
+10 rows in set (0.00 sec)
+
+----------------------------------------- vCount() -------------------------------
+mysql> SELECT COUNT(*) FROM vehicles;
++----------+
+| COUNT(*) |
++----------+
+|       10 |
++----------+
+1 row in set (0.00 sec)
+
+--------------------------------- TESTS 2 ----------------------------------------------
+*** add vehicle function::addInventory() **** 
+----------------------------------------------------------------------------------------
+Welcome to the Car Rental Service Software, CRSS:
+
+Are your an Administrator, an existing customer or a new customer?
+Select (A) for Administrator, (E) for an existing customer or (N) for a New customer: a
+
+
+Hello, would you like to Access Customer or Vehicle data (C or V): v
+
+
+You've selected Access to Vehicle Data:
+For Display Vehicle Information (select [D])
+For Vehicle Count (select [C])
+To Insert New Vehicle Inventory (select [N])
+To Delete Vehicle from Inventory (select [B]):: n
+
+
+You've selected to Insert New Vehicle Inventory:
+
+Would you like to add a new vehicle? (Y/N): y
+
+
+Connection 3 to the MySQL Database CRSS was Successful.
+
+
+Please enter Vehicle Identification Number: CYG739IZYT1512345
+
+Please enter Vehicle License Plate Number: HWS754Q
+Please enter Vehicle Type: sedan
+
+Please enter Vehicle Size: large
+
+Please enter Vehicle Make: bmw
+
+Please enter Vehicle Model: 750li
+
+Please enter Vehicle Color: blue
+
+Please enter Vehicle MPGs: 22
+
+Please enter Vehicle Navigation system status (yes or no): yes
+
+Please enter Vehicle Seating Capacity: 5
+
+Please enter the number of Cylinders this vehicle's engine has: 8
+
+Please enter the Transmission Type this vehicle has: automatic
+These are all the vehicles in the Database:
+
+Here is the the result of your insert query.
+
+
+Connection 2 to the MySQL Database CRSS was Successful.
+
+These are all the vehicles in the Database:
+
+ vVin: AYG739IKAH1528Z91 plateNumber: SWS5840 vType: coupe vSize: small vMake: chevrolet vModel: camaro color: black vMPG: 17 vNav: yes seatingCapacity: 4 engineCylinders: 8 transmissionType: manual
+
+ vVin: B1L239IK13101MSI1 plateNumber: LPSPLP1 vType: sedan vSize: small vMake: kia vModel: rio color: pink vMPG: 29 vNav: yes seatingCapacity: 4 engineCylinders: 4 transmissionType: automatic
+
+ vVin: CYG739IKAH1528B32 plateNumber: HWS584I vType: suv vSize: medium vMake: honda vModel: crv color: blue vMPG: 33 vNav: no seatingCapacity: 5 engineCylinders: 4 transmissionType: automatic
+
+ vVin: CYG739IKAH1528F09 plateNumber: HWS579T vType: sedan vSize: large vMake: mercedes vModel: e550 color: black vMPG: 30 vNav: yes seatingCapacity: 6 engineCylinders: 8 transmissionType: automatic
+
+ vVin: CYG739IZYT1512345 plateNumber: HWS754Q vType: sedan vSize: large vMake: bmw vModel: 750li color: blue vMPG: 22 vNav: yes seatingCapacity: 5 engineCylinders: 8 transmissionType: automatic
+
+ vVin: CYG739IZYT1528B32 plateNumber: HWS794I vType: suv vSize: medium vMake: toyota vModel: highlander color: white vMPG: 24 vNav: yes seatingCapacity: 5 engineCylinders: 6 transmissionType: automatic
+
+ vVin: GFN23LPQQ31MLAQLL plateNumber: NPSMAZS vType: minivan vSize: large vMake: chrysler vModel: pacifica color: blue vMPG: 30 vNav: yes seatingCapacity: 8 engineCylinders: 6 transmissionType: automatic
+
+ vVin: KYG739IKAH1528K01 plateNumber: OGS584P vType: coupe vSize: small vMake: nissan vModel: 370z color: white vMPG: 19 vNav: no seatingCapacity: 2 engineCylinders: 6 transmissionType: manual
+
+ vVin: KYG739IKAH1528K02 plateNumber: OGSYT5P vType: coupe vSize: small vMake: ford vModel: mustang color: red vMPG: 16 vNav: yes seatingCapacity: 4 engineCylinders: 8 transmissionType: manual
+
+ vVin: L0G239IK131MLAQP9 plateNumber: LP245P1 vType: minivan vSize: large vMake: honda vModel: odessey color: black vMPG: 30 vNav: yes seatingCapacity: 8 engineCylinders: 6 transmissionType: automatic
+
+ vVin: LYG739IK131528KP2 plateNumber: ZGSPS20 vType: suv vSize: medium vMake: toyota vModel: rav4 color: white vMPG: 28 vNav: yes seatingCapacity: 7 engineCylinders: 6 transmissionType: Automatic
+
+
+
+Would you like to add more vehicles? (Y/N): y
+------------------------------------------------------------------------- FROM MySQL --------------------------------------------------------------------------------------------
+mysql> select * from vehicles;
++-------------------+-------------+---------+--------+-----------+------------+-------+------+------+-----------------+-----------------+------------------+
+| vVin              | plateNumber | vType   | vSize  | vMake     | vModel     | color | vMPG | vNav | seatingCapacity | engineCylinders | transmissionType |
++-------------------+-------------+---------+--------+-----------+------------+-------+------+------+-----------------+-----------------+------------------+
+| AYG739IKAH1528Z91 | SWS5840     | coupe   | small  | chevrolet | camaro     | black |   17 | yes  |               4 |               8 | manual           |
+| B1L239IK13101MSI1 | LPSPLP1     | sedan   | small  | kia       | rio        | pink  |   29 | yes  |               4 |               4 | automatic        |
+| CYG739IKAH1528B32 | HWS584I     | suv     | medium | honda     | crv        | blue  |   33 | no   |               5 |               4 | automatic        |
+| CYG739IKAH1528F09 | HWS579T     | sedan   | large  | mercedes  | e550       | black |   30 | yes  |               6 |               8 | automatic        |
+| CYG739IZYT1512345 | HWS754Q     | sedan   | large  | bmw       | 750li      | blue  |   22 | yes  |               5 |               8 | automatic        |
+| CYG739IZYT1528B32 | HWS794I     | suv     | medium | toyota    | highlander | white |   24 | yes  |               5 |               6 | automatic        |
+| GFN23LPQQ31MLAQLL | NPSMAZS     | minivan | large  | chrysler  | pacifica   | blue  |   30 | yes  |               8 |               6 | automatic        |
+| KYG739IKAH1528K01 | OGS584P     | coupe   | small  | nissan    | 370z       | white |   19 | no   |               2 |               6 | manual           |
+| KYG739IKAH1528K02 | OGSYT5P     | coupe   | small  | ford      | mustang    | red   |   16 | yes  |               4 |               8 | manual           |
+| L0G239IK131MLAQP9 | LP245P1     | minivan | large  | honda     | odessey    | black |   30 | yes  |               8 |               6 | automatic        |
+| LYG739IK131528KP2 | ZGSPS20     | suv     | medium | toyota    | rav4       | white |   28 | yes  |               7 |               6 | Automatic        |
++-------------------+-------------+---------+--------+-----------+------------+-------+------+------+-----------------+-----------------+------------------+
+11 rows in set (0.00 sec)
+
+--------------------------------- TESTS 3 ----------------------------------------------
+*** Delete vehicle function::deleteVehicle() **** 
+----------------------------------------------------------------------------------------
+
+For Display Vehicle Information (select [D])
+For Vehicle Count (select [C])
+To Insert New Vehicle Inventory (select [N])
+To Delete Vehicle from Inventory (select [B]):: b
+
+
+You've selected to Delete Vehicle from Inventory:
+
+Would you like to delete a vehicle? (Y/N): y
+
+
+
+Connection 4 to the MySQL Database CRSS was Successful.
+
+Enter Vehicle Identification Number: CYG739IZYT1512345
+
+
+Here is the the result of your delete query.
+
+
+Connection 2 to the MySQL Database CRSS was Successful.
+
+These are all the vehicles in the Database:
+
+ vVin: AYG739IKAH1528Z91 plateNumber: SWS5840 vType: coupe vSize: small vMake: chevrolet vModel: camaro color: black vMPG: 17 vNav: yes seatingCapacity: 4 engineCylinders: 8 transmissionType: manual
+
+ vVin: B1L239IK13101MSI1 plateNumber: LPSPLP1 vType: sedan vSize: small vMake: kia vModel: rio color: pink vMPG: 29 vNav: yes seatingCapacity: 4 engineCylinders: 4 transmissionType: automatic
+
+ vVin: CYG739IKAH1528B32 plateNumber: HWS584I vType: suv vSize: medium vMake: honda vModel: crv color: blue vMPG: 33 vNav: no seatingCapacity: 5 engineCylinders: 4 transmissionType: automatic
+
+ vVin: CYG739IKAH1528F09 plateNumber: HWS579T vType: sedan vSize: large vMake: mercedes vModel: e550 color: black vMPG: 30 vNav: yes seatingCapacity: 6 engineCylinders: 8 transmissionType: automatic
+
+ vVin: CYG739IZYT1528B32 plateNumber: HWS794I vType: suv vSize: medium vMake: toyota vModel: highlander color: white vMPG: 24 vNav: yes seatingCapacity: 5 engineCylinders: 6 transmissionType: automatic
+
+ vVin: GFN23LPQQ31MLAQLL plateNumber: NPSMAZS vType: minivan vSize: large vMake: chrysler vModel: pacifica color: blue vMPG: 30 vNav: yes seatingCapacity: 8 engineCylinders: 6 transmissionType: automatic
+
+ vVin: KYG739IKAH1528K01 plateNumber: OGS584P vType: coupe vSize: small vMake: nissan vModel: 370z color: white vMPG: 19 vNav: no seatingCapacity: 2 engineCylinders: 6 transmissionType: manual
+
+ vVin: KYG739IKAH1528K02 plateNumber: OGSYT5P vType: coupe vSize: small vMake: ford vModel: mustang color: red vMPG: 16 vNav: yes seatingCapacity: 4 engineCylinders: 8 transmissionType: manual
+
+ vVin: L0G239IK131MLAQP9 plateNumber: LP245P1 vType: minivan vSize: large vMake: honda vModel: odessey color: black vMPG: 30 vNav: yes seatingCapacity: 8 engineCylinders: 6 transmissionType: automatic
+
+ vVin: LYG739IK131528KP2 plateNumber: ZGSPS20 vType: suv vSize: medium vMake: toyota vModel: rav4 color: white vMPG: 28 vNav: yes seatingCapacity: 7 engineCylinders: 6 transmissionType: Automatic
+
+
+
+Would you like to continue deleting vehicles? (Y/N):
+------------------------------------------------------------------------- FROM MySQL --------------------------------------------------------------------------------------------
+mysql> select count(*) from vehicles;
++----------+
+| count(*) |
++----------+
+|       10 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select * from vehicles;
++-------------------+-------------+---------+--------+-----------+------------+-------+------+------+-----------------+-----------------+------------------+
+| vVin              | plateNumber | vType   | vSize  | vMake     | vModel     | color | vMPG | vNav | seatingCapacity | engineCylinders | transmissionType |
++-------------------+-------------+---------+--------+-----------+------------+-------+------+------+-----------------+-----------------+------------------+
+| AYG739IKAH1528Z91 | SWS5840     | coupe   | small  | chevrolet | camaro     | black |   17 | yes  |               4 |               8 | manual           |
+| B1L239IK13101MSI1 | LPSPLP1     | sedan   | small  | kia       | rio        | pink  |   29 | yes  |               4 |               4 | automatic        |
+| CYG739IKAH1528B32 | HWS584I     | suv     | medium | honda     | crv        | blue  |   33 | no   |               5 |               4 | automatic        |
+| CYG739IKAH1528F09 | HWS579T     | sedan   | large  | mercedes  | e550       | black |   30 | yes  |               6 |               8 | automatic        |
+| CYG739IZYT1528B32 | HWS794I     | suv     | medium | toyota    | highlander | white |   24 | yes  |               5 |               6 | automatic        |
+| GFN23LPQQ31MLAQLL | NPSMAZS     | minivan | large  | chrysler  | pacifica   | blue  |   30 | yes  |               8 |               6 | automatic        |
+| KYG739IKAH1528K01 | OGS584P     | coupe   | small  | nissan    | 370z       | white |   19 | no   |               2 |               6 | manual           |
+| KYG739IKAH1528K02 | OGSYT5P     | coupe   | small  | ford      | mustang    | red   |   16 | yes  |               4 |               8 | manual           |
+| L0G239IK131MLAQP9 | LP245P1     | minivan | large  | honda     | odessey    | black |   30 | yes  |               8 |               6 | automatic        |
+| LYG739IK131528KP2 | ZGSPS20     | suv     | medium | toyota    | rav4       | white |   28 | yes  |               7 |               6 | Automatic        |
++-------------------+-------------+---------+--------+-----------+------------+-------+------+------+-----------------+-----------------+------------------+
+10 rows in set (0.00 sec)
+
+
+------------------------------------------------------------------- **FOR Customer Class FNs meant to be accessed by cutomer and not admin** --------------------------------------------------------------------
+
+--------------------------------- TESTS 4 ----------------------------------------------
+***Display pickup/dropoff info function::displayPickupDropoffInfo() **** 
+----------------------------------------------------------------------------------------
+Are your an Administrator, an existing customer or a new customer?
+Select (A) for Administrator, (E) for an existing customer or (N) for a New customer: e
+
+
+Hello Customer, let's book your vehicle!
+To Delete Customer Account Information (select [D])
+To Make a Reservation (select [M])
+To Delete a Reservation (select [R])
+To Display Pickup/Dropoff Information (select [P]):: p
+
+
+You've selected to Display Pickup/Dropoff Information:
+
+Please enter your reservation ID number: 4
+
+Please enter your email address : crykim@gmail.com
+
+
+
+Connection 12 to the MySQL Database CRSS was Successful.
+
+
+Reservation ID: 4
+ Driver's Lisence Number: FDB709M
+ Email Address: crykim@gmail.com
+ Pickup Date: 2023-02-08
+ Dropoff Date: 2023-02-27
+ Pick-up Time: 01:30:15
+ Dropoff Time: 09:15:45
+
+
+Would you like to return to the Vehicle Data menu? ( Y or N ) y
+------------------------------------------------------------------------- FROM MySQL --------------------------------------------------------------------------------------------
+--------------------------------- TESTS ----------------------------------------------
+*** Insert new customer Info function::displayPickupDropoffInfo() **** 
+----------------------------------------------------------------------------------------
+Welcome to the Car Rental Service Software, CRSS:
+
+Are your an Administrator, an existing customer or a new customer?
+Select (A) for Administrator, (E) for an existing customer or (N) for a New customer: n
+
+
+Hello Customer, let's create your new account!
+
+Would you like to add a new customer? (Y/N): y
+
+
+
+Connection 9 to the MySQL Database CRSS was Successful.
+
+Enter Driver's License Number: DWE134X
+
+ Enter Email Address: ckent@gmail.com
+
+ Enter a Password for your account: $password2
+
+Please enter your first name: clark
+
+Enter Last Name: kent
+
+Enter Birthday: 1980-01-01
+
+Enter City of Residence: Metropolis
+
+Please enter the Apartment Number, however if none exists then add N/A: N/A
+
+Enter your Street Address: 1456 Fly High st.
+
+Enter State of Residence: Kansas
+
+Enter Zip Code: 66620
+
+Please enter your current age: 42
+
+Your account has been created.
+
+Connection 6 to the MySQL Database CRSS was Successful.
+
+Drivers License Number: DNV584X Email Address: bobvila@hotmail.com Password: $password1 Customer First Name: bob Customer Last Name:vila Customer Birthday: 1960-01-10 City Of Residence: detroit Apartment Number: N/A Street Address: 4358 Candy Cane Rd. State Of Residence: Michigan Zip Code: 48127 Customer Age: 62
+
+Drivers License Number: DWE134X Email Address: ckent@gmail.com Password: $password2 Customer First Name: clark Customer Last Name:kent Customer Birthday: 1980-01-01 City Of Residence: Metropolis Apartment Number: N/A Street Address: 1456 Fly High st. State Of Residence: Kansas Zip Code: 66620 Customer Age: 42
+
+Drivers License Number: FDB709M Email Address: crykim@gmail.com Password: #Accounting1@ Customer First Name: crystal Customer Last Name:kim Customer Birthday: 1999-11-05 City Of Residence: Garden Grove Apartment Number: 19 Street Address: 1345 New Land State Of Residence: Nevada Zip Code: 95194 Customer Age: 23
+
+Drivers License Number: FDB716D Email Address: himpson@gmail.com Password: #password$ Customer First Name: homer Customer Last Name:simpson Customer Birthday: 1956-05-12 City Of Residence: Springfield Apartment Number: N/A Street Address: 742 Evergreen Terrace State Of Residence: Oregon Zip Code: 97205 Customer Age: 66
+
+Drivers License Number: FDB71lZ Email Address: pgriffin@hotmail.com Password: #MegSucks% Customer First Name: peter Customer Last Name:griffin Customer Birthday: 1977-06-12 City Of Residence: Quahog Apartment Number: N/A Street Address: 31 Spooner Street State Of Residence: Rhode Island Zip Code: 00093 Customer Age: 44
+
+Drivers License Number: FDB734Y Email Address: kanwaljeetahluwalia@gmail.com Password: #DarthVaderSucks3& Customer First Name: kanwaljeet Customer Last Name:ahluwalia Customer Birthday: 1986-10-15 City Of Residence: Fullerton Apartment Number: N/A Street Address: 45783 Chuck Norris Cir. State Of Residence: California Zip Code: 92835 Customer Age: 36
+
+Drivers License Number: FDB7Y59 Email Address: alitahami@gmail.com Password: #GiantBoulder1$ Customer First Name: ali Customer Last Name:tahami Customer Birthday: 1998-01-25 City Of Residence: Irvine Apartment Number: 15 Street Address: 1234 Where In The World AVE State Of Residence: California Zip Code: 92604 Customer Age: 24
+
+
+Would you like to add a new customer? (Y/N): n
+
+
+Would you like to return to the main CRSS menu? ( Y or N ) y
+
